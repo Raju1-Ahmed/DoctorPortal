@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItem = <>
             
-        <li><a>Home</a></li>
-        <li><a>Appointmen</a></li>
-        <li><a>Review</a></li>
-        <li><a>Contract</a></li>
-        <li><a>About</a></li>
-        <li><a>Login</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/appointmen">Appointmen</Link></li>
+        <li><Link to="/review">Review</Link></li>
+        <li><Link to="/contract">Contract</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/login">Login</Link></li>
     </>
     return (
 <div class="navbar bg-base-100">

@@ -13,6 +13,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyAppointment from './pages/Dashboard/MyAppointment';
 import MyReview from './pages/Dashboard/MyReview';
+import Users from './pages/Dashboard/Users';
+import RequireAdmin from './pages/Login/RequireAdmin';
 function App() {
   return (
     <div className='mx-w-7xl mx-auto px-12'>
@@ -27,6 +29,9 @@ function App() {
         </RequireAuth>}>
           <Route index element={<MyAppointment/>}></Route>
           <Route path="review" element={<MyReview/>}></Route>
+          <Route path="user" element={<RequireAdmin>
+            <Users/>
+          </RequireAdmin>}></Route>
         </Route>
 
         <Route path="login" element={<Login/>} />
